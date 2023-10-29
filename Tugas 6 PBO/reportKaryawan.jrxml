@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b09dfb5-4d99-4091-af8a-2f0bbf88bb83">
+	<property name="ireport.zoom" value="1.3310000000000048"/>
+	<property name="ireport.x" value="9"/>
+	<property name="ireport.y" value="16"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM identitas]]>
+	</queryString>
+	<field name="id_karyawan" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="alamat" class="java.lang.String"/>
+	<group name="id_karyawan">
+		<groupExpression><![CDATA[$F{id_karyawan}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="alamat">
+		<groupExpression><![CDATA[$F{alamat}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="108" y="46" width="205" height="25" forecolor="#009999" uuid="85ae6f24-6e8c-412e-853b-4364a46f3b0a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[DATA KARYAWAN]]></text>
+			</staticText>
+			<image>
+				<reportElement x="330" y="0" width="111" height="71" uuid="389bac46-7b0c-4333-975c-767871433f4d"/>
+				<imageExpression><![CDATA["C:\\Users\\SHOFYYAH\\Downloads\\—Pngtree—letter m logo_6928738.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="555" height="30" forecolor="#009999" uuid="3d4122e7-2029-486c-94bf-57296d1056f4"/>
+				<box>
+					<pen lineColor="#CC0033"/>
+					<topPen lineColor="#CC0033"/>
+					<leftPen lineColor="#CC0033"/>
+					<bottomPen lineColor="#CC0033"/>
+					<rightPen lineColor="#CC0033"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="20"/>
+				</textElement>
+				<text><![CDATA[PT. MERDEKA JAYA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="70" y="41" width="408" height="1" uuid="2acc1f8f-9ee0-4d3c-bd22-dcd01c845d2a"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="144" height="30" forecolor="#666666" uuid="d9c0fd4b-ddbf-44fa-9e6b-fdf6e3b87751">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd426237-0004-441f-9852-2b42612e40fe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[ID KARYAWAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="0" width="66" height="30" forecolor="#666666" uuid="cac4d318-8b36-4f31-bb0a-8e2b6b942342">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47091bc6-54e4-4fc3-9c53-7995e34d3d19"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="0" width="86" height="30" forecolor="#666666" uuid="9a9b899a-8a09-4a1d-bc9f-258523a9095a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47091bc6-54e4-4fc3-9c53-7995e34d3d19"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="0" width="128" height="30" uuid="08a6daba-2657-4d64-91f1-a9ab62ae4dfa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd426237-0004-441f-9852-2b42612e40fe"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_karyawan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="0" width="100" height="30" uuid="2ecd71ee-3626-4ff3-a35c-258775192d21">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47091bc6-54e4-4fc3-9c53-7995e34d3d19"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="0" width="100" height="30" uuid="70216a41-f82e-40c8-ac6f-96ac022b19ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47091bc6-54e4-4fc3-9c53-7995e34d3d19"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
