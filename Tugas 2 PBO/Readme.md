@@ -1,0 +1,12 @@
+# Constructor
+Constructor di Java adalah sebuah method khusus yang digunakan untuk menginisialisasi objek saat objek tersebut dibuat. Constructor dipanggil ketika objek dari sebuah class dibuat dan dapat digunakan untuk mengatur nilai awal dari atribut objek.
+https://www.w3schools.com/java/java_constructors.asp
+
+# Tahapan - tahapan
+1. Pertama, membuat diagram turunan Makhluk Hidup.
+2. Kedua, membuat kelas MakhlukHidup yang digunakan sebagai kelas untuk diwariskan kepada kelas turunannya. Atribut yang digunakan ada nama, species, hidup, habitat, dan tinggi. Untuk atribut hidup, habitat, dan tinggi saya menggunakan protected agar nanti dapat diakses oleh kelas turunannya dan untuk constructornya ada 4.
+3. Ketiga, membuat kelas turunan yaitu Tumbuhan extends MakhlukHidup. Terdapat 5 constructor dengan construktor pertama tanpa parameter yang digunakan untuk membuat objek dengan nilai-nilai awal/default yang sudah ditentukan. Untuk constructor selanjutnya, saya menggunakan parameter dengan tipe data berbeda agar dapat menginisialisasi objek dengan nilai-nilai yang berbeda. Terdapat super dan this pada constructor. Super digunakan untuk memanggil kelas awal/kelas penurun yang awal sedangkan this digunakan untuk memanggil dirinya sendiri. Atribut yang digunakan pada kelas Tumbuhan ada jenisAkar.
+4. Ke-empat, membuat kelas turunan yaitu Vertebrata, terdapat 5 constructor didalamnya dan this yang digunakan untuk memanggil dirinya sendiri.
+5. Kelima, membuat kelas turunan yaitu Hewan extends MakhlukHidup. Terdapat 5 constructor dengan konstruktor pertama tanpa parameter yang digunakan untuk membuat objek dengan nilai-nilai awal/default yang sudah ditentukan. Untuk constructor selanjutnya, saya menggunakan parameter dengan tipe data berbeda agar dapat menginisialisasi objek dengan nilai-nilai yang berbeda. Terdapat super dan this pada constructor. Super digunakan untuk memanggil kelas awal/kelas penurun yang awal sedangkan this digunakan untuk memanggil dirinya sendiri. Atribut yang digunakan pada kelas Hewan ada jumlahKaki dan berat. Untuk berat saya menggunakan protected agar bisa diturunkan ke kelas turunannya.
+6. Ke-enam, membuat kelas turunan yaitu Sapi, terdapat 5 constructor didalamnya dan this yang digunakan untuk memanggil dirinya sendiri. Saya juga menambahkan lagi atribut warnaKulit didalamnya.
+7. Untuk bagian kelas mainClass saya menggunakan package berbeda agar dapat mengetahui apakah jika terdapat protected error atau tidak, jika error maka pada kelas mainClass diberi import agar bisa diakses.
