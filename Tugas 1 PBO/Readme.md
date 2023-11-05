@@ -1,7 +1,7 @@
-# Private
-Public : bisa diakses di class manapun, di package yang sama maupun tidak.
-Private : hanya bisa diakses dari dalam class itu sendiri.
-Protected : hanya bisa diakses dari dalam class itu sendiri, dan class turunannya.
+# Public, Private, Protected
+- Public : bisa diakses di class manapun, di package yang sama maupun tidak.
+- Private : hanya bisa diakses dari dalam class itu sendiri.
+- Protected : hanya bisa diakses dari dalam class itu sendiri, dan class turunannya.
 
 # Tahapan - tahapan
 1. Pertama, buat Project Baru yang akan digunakan untuk membuat class-class nya.
