@@ -99,13 +99,14 @@ public class InputBuku extends javax.swing.JFrame {
                 model.setRowCount(0);
                 for (Buku data : results) {
 
-                    Object[] baris = new Object[6];
+                    Object[] baris = new Object[7];
                     baris[0] = data.getIsbn();
                     baris[1] = data.getJudul_buku();
-                    baris[2] = data.getPenerbit();
-                    baris[3] = data.getPengarang();
-                    baris[4] = data.getTahun_terbit();
-                    baris[5] = data.getJumlah_halaman();
+                    baris[2] = data.getKategori();
+                    baris[3] = data.getPenerbit();
+                    baris[4] = data.getPengarang();
+                    baris[5] = data.getTahun_terbit();
+                    baris[6] = data.getJumlah_halaman();
                     
                     model.addRow(baris);
                 }
@@ -126,6 +127,8 @@ public class InputBuku extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabelJKategori = new javax.swing.JLabel();
+        jTextFieldKategori = new javax.swing.JTextField();
         jButtonCetak = new javax.swing.JButton();
         jButtonDelete = new javax.swing.JButton();
         jLabelwelcomme = new javax.swing.JLabel();
@@ -149,7 +152,6 @@ public class InputBuku extends javax.swing.JFrame {
         jComboBoxKategori = new javax.swing.JComboBox<>();
         jTextFieldSearching = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabelwelcomme1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -175,6 +177,24 @@ public class InputBuku extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 110, -1));
 
+        jLabelJKategori.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelJKategori.setForeground(new java.awt.Color(1, 143, 158));
+        jLabelJKategori.setText("Kategori");
+        getContentPane().add(jLabelJKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 95, -1));
+
+        jTextFieldKategori.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(4, 123, 153), null));
+        jTextFieldKategori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldKategoriActionPerformed(evt);
+            }
+        });
+        jTextFieldKategori.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldKategoriKeyTyped(evt);
+            }
+        });
+        getContentPane().add(jTextFieldKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 200, 30));
+
         jButtonCetak.setBackground(new java.awt.Color(25, 133, 167));
         jButtonCetak.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButtonCetak.setForeground(new java.awt.Color(255, 255, 255));
@@ -184,7 +204,7 @@ public class InputBuku extends javax.swing.JFrame {
                 jButtonCetakActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 440, 90, 30));
+        getContentPane().add(jButtonCetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 500, 90, 30));
 
         jButtonDelete.setBackground(new java.awt.Color(25, 133, 167));
         jButtonDelete.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -195,7 +215,7 @@ public class InputBuku extends javax.swing.JFrame {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 440, 90, 30));
+        getContentPane().add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 500, 90, 30));
 
         jLabelwelcomme.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelwelcomme.setForeground(new java.awt.Color(6, 128, 153));
@@ -229,7 +249,7 @@ public class InputBuku extends javax.swing.JFrame {
         jLabelPenerbit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelPenerbit.setForeground(new java.awt.Color(1, 143, 158));
         jLabelPenerbit.setText("Penerbit");
-        getContentPane().add(jLabelPenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 95, -1));
+        getContentPane().add(jLabelPenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 95, -1));
 
         jTextFieldPenerbit.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(4, 123, 153), null));
         jTextFieldPenerbit.addActionListener(new java.awt.event.ActionListener() {
@@ -237,7 +257,7 @@ public class InputBuku extends javax.swing.JFrame {
                 jTextFieldPenerbitActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldPenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 200, 30));
+        getContentPane().add(jTextFieldPenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, 200, 30));
 
         jLabelPengarang.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelPengarang.setForeground(new java.awt.Color(1, 143, 158));
@@ -274,7 +294,7 @@ public class InputBuku extends javax.swing.JFrame {
                 jButtonSimpanActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 440, 90, 30));
+        getContentPane().add(jButtonSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 500, 90, 30));
 
         jButtonUpdate.setBackground(new java.awt.Color(25, 133, 167));
         jButtonUpdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -285,7 +305,7 @@ public class InputBuku extends javax.swing.JFrame {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 90, 30));
+        getContentPane().add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 500, 90, 30));
 
         jTableDataBuku.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -295,7 +315,7 @@ public class InputBuku extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Kategori", "ISBN", "Judul Buku", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman"
+                "ISBN", "Judul Buku", "Kategori", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman"
             }
         ));
         jTableDataBuku.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -305,7 +325,7 @@ public class InputBuku extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTableDataBuku);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, 660, 170));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, 660, 170));
 
         jLabelJumlahHalaman.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelJumlahHalaman.setForeground(new java.awt.Color(1, 143, 158));
@@ -325,14 +345,14 @@ public class InputBuku extends javax.swing.JFrame {
         jLabelISBN1.setText("ISBN");
         getContentPane().add(jLabelISBN1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 95, -1));
 
-        jComboBoxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ISBN", "Judul Buku", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman", " " }));
+        jComboBoxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ISBN", "Judul Buku", "Kategori", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman", " " }));
         jComboBoxKategori.setBorder(null);
         jComboBoxKategori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxKategoriActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 110, 30));
+        getContentPane().add(jComboBoxKategori, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 120, 110, 30));
 
         jTextFieldSearching.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 107, 153), null));
         jTextFieldSearching.addActionListener(new java.awt.event.ActionListener() {
@@ -345,23 +365,11 @@ public class InputBuku extends javax.swing.JFrame {
                 jTextFieldSearchingKeyReleased(evt);
             }
         });
-        getContentPane().add(jTextFieldSearching, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 200, 30));
+        getContentPane().add(jTextFieldSearching, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, 200, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("SHORT BY");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 140, 60, -1));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField1KeyTyped(evt);
-            }
-        });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 130, 170, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 130, 60, -1));
 
         jLabelwelcomme1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabelwelcomme1.setForeground(new java.awt.Color(6, 128, 153));
@@ -370,7 +378,7 @@ public class InputBuku extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("CARI");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 30, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 30, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(12, 134, 153));
@@ -412,7 +420,7 @@ public class InputBuku extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, 90));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\SHOFYYAH\\Downloads\\1ab.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\SHOFYYAH\\Downloads\\1ac.png")); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
 
         pack();
@@ -440,6 +448,7 @@ public class InputBuku extends javax.swing.JFrame {
         
         jTextFieldISBN.setText("");
         jTextFieldJudulBuku.setText("");
+        jTextFieldKategori.setText("");
         jTextFieldPenerbit.setText("");
         jTextFieldPengarang.setText("");
         jTextFieldTahunTerbit.setText("");
@@ -474,11 +483,12 @@ public class InputBuku extends javax.swing.JFrame {
     private void jButtonSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSimpanActionPerformed
         // TODO add your handling code here:
         String ISBN = jTextFieldISBN.getText().trim();
-        String Judul_Buku = jTextFieldJudulBuku.getText();
+        String JudulBuku = jTextFieldJudulBuku.getText();
+        String Kategori = jTextFieldKategori.getText();
         String Penerbit = jTextFieldPenerbit.getText();
         String Pengarang = jTextFieldPengarang.getText();
-        String Tahun_Terbit = jTextFieldTahunTerbit.getText();
-        String Jumlah_Halaman = jTextFieldJumlahHalaman.getText();
+        String TahunTerbit = jTextFieldTahunTerbit.getText();
+        String JumlahHalaman = jTextFieldJumlahHalaman.getText();
         
         // awal persistence
         try {
@@ -487,11 +497,12 @@ public class InputBuku extends javax.swing.JFrame {
             entityManager.getTransaction().begin();
             Buku b = new Buku();
             b.setIsbn(ISBN);
-            b.setJudulBuku(Judul_Buku);
+            b.setJudulBuku(JudulBuku);
+            b.setKategori(Kategori);
             b.setPenerbit(Penerbit);
             b.setPengarang(Pengarang);
-            b.setTahunTerbit(Tahun_Terbit);
-            b.setJumlahHalaman(Jumlah_Halaman);
+            b.setTahunTerbit(TahunTerbit);
+            b.setJumlahHalaman(JumlahHalaman);
             entityManager.persist(b);
             entityManager.getTransaction().commit();
 
@@ -506,6 +517,7 @@ public class InputBuku extends javax.swing.JFrame {
         // akhir persistence
         jTextFieldISBN.setText("");
         jTextFieldJudulBuku.setText("");
+        jTextFieldKategori.setText("");
         jTextFieldPenerbit.setText("");
         jTextFieldPengarang.setText("");
         jTextFieldTahunTerbit.setText("");
@@ -520,11 +532,12 @@ public class InputBuku extends javax.swing.JFrame {
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
         // TODO add your handling code here:
         String ISBN = jTextFieldISBN.getText().trim();
-        String Judul_Buku = jTextFieldJudulBuku.getText();
+        String JudulBuku = jTextFieldJudulBuku.getText();
+        String Kategori = jTextFieldKategori.getText();
         String Penerbit = jTextFieldPenerbit.getText();
         String Pengarang = jTextFieldPengarang.getText();
-        String Tahun_Terbit = jTextFieldTahunTerbit.getText();
-        String Jumlah_Halaman = jTextFieldJumlahHalaman.getText();
+        String TahunTerbit = jTextFieldTahunTerbit.getText();
+        String JumlahHalaman = jTextFieldJumlahHalaman.getText();
         // awal persistence
         try {
             
@@ -532,11 +545,12 @@ public class InputBuku extends javax.swing.JFrame {
             entityManager.getTransaction().begin();
             Buku b = entityManager.find(Buku.class, ISBN);
             b.setIsbn(ISBN);
-            b.setJudulBuku(Judul_Buku);
+            b.setJudulBuku(JudulBuku);
+            b.setKategori(Kategori);
             b.setPenerbit(Penerbit);
             b.setPengarang(Pengarang);
-            b.setTahunTerbit(Tahun_Terbit);
-            b.setJumlahHalaman(Jumlah_Halaman);
+            b.setTahunTerbit(TahunTerbit);
+            b.setJumlahHalaman(JumlahHalaman);
             
             entityManager.persist(b);
             entityManager.getTransaction().commit();
@@ -550,6 +564,7 @@ public class InputBuku extends javax.swing.JFrame {
         // akhir persistence
         jTextFieldISBN.setText("");
         jTextFieldJudulBuku.setText("");
+        jTextFieldKategori.setText("");
         jTextFieldPenerbit.setText("");
         jTextFieldPengarang.setText("");
         jTextFieldTahunTerbit.setText("");
@@ -575,16 +590,19 @@ public class InputBuku extends javax.swing.JFrame {
         String JudulBuku = jTableDataBuku.getValueAt(baris, 1).toString();
         jTextFieldJudulBuku.setText(JudulBuku);
         
-        String Penerbit = jTableDataBuku.getValueAt(baris, 2).toString();
+        String Kategori = jTableDataBuku.getValueAt(baris, 2).toString();
+        jTextFieldKategori.setText(Kategori);
+        
+        String Penerbit = jTableDataBuku.getValueAt(baris, 3).toString();
         jTextFieldPenerbit.setText(Penerbit);
         
-        String Pengarang = jTableDataBuku.getValueAt(baris, 3).toString();
+        String Pengarang = jTableDataBuku.getValueAt(baris, 4).toString();
         jTextFieldPengarang.setText(Pengarang);
 
-        String TahunTerbit = jTableDataBuku.getValueAt(baris, 4).toString();
+        String TahunTerbit = jTableDataBuku.getValueAt(baris, 5).toString();
         jTextFieldTahunTerbit.setText(TahunTerbit);
         
-        String JumlahHalaman = jTableDataBuku.getValueAt(baris, 5).toString();
+        String JumlahHalaman = jTableDataBuku.getValueAt(baris, 6).toString();
         jTextFieldJumlahHalaman.setText(JumlahHalaman);
         
 //        new AddBuku().setVisible(true);
@@ -611,6 +629,9 @@ public class InputBuku extends javax.swing.JFrame {
                     break;
                 case "Judul Buku":
                     queryString += "LOWER(b.judulBuku) LIKE LOWER(:searchTerm)";
+                    break;
+                case "Kategori":
+                    queryString += "LOWER(b.kategori) LIKE LOWER(:searchTerm)";
                     break;
                 case "Penerbit":
                     queryString += "LOWER(b.penerbit) LIKE LOWER(:searchTerm)";
@@ -658,7 +679,8 @@ public class InputBuku extends javax.swing.JFrame {
                 for (Buku result : results) {
                     Object[] rowData = {
                         result.getIsbn(),
-                        result.getJudul_buku(), 
+                        result.getJudul_buku(),
+                        result.getKategori(),
                         result.getPenerbit(),
                         result.getPengarang(),
                         result.getTahun_terbit(),
@@ -704,6 +726,9 @@ public class InputBuku extends javax.swing.JFrame {
                 case "Judul Buku":
                     queryString += "LOWER(b.judulBuku) LIKE LOWER(:searchTerm)";
                     break;
+                case "Kategori":
+                    queryString += "LOWER(b.kategori) LIKE LOWER(:searchTerm)";
+                    break;
                 case "Penerbit":
                     queryString += "LOWER(b.penerbit) LIKE LOWER(:searchTerm)";
                     break;
@@ -737,6 +762,7 @@ public class InputBuku extends javax.swing.JFrame {
                 // Add columns to the model
                 dataModel.addColumn("ISBN");
                 dataModel.addColumn("Judul");
+                dataModel.addColumn("Kategori");
                 dataModel.addColumn("Penerbit");
                 dataModel.addColumn("Pengarang");
                 dataModel.addColumn("Tahun Terbit");
@@ -748,6 +774,7 @@ public class InputBuku extends javax.swing.JFrame {
                     Object[] rowData = {
                         result.getIsbn(),
                         result.getJudul_buku(),
+                        result.getKategori(),
                         result.getPenerbit(),
                         result.getPengarang(),
                         result.getTahun_terbit(),
@@ -775,12 +802,41 @@ public class InputBuku extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jTextFieldSearchingKeyReleased
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        new InputBuku().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel5MouseClicked
 
-    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+        new InputSkripsi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        new PeminjamanBuku().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+        new LaporanDataBuku().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        new LaporanDataSkripsi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jTextFieldKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldKategoriActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldKategoriActionPerformed
+
+    private void jTextFieldKategoriKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldKategoriKeyTyped
         // TODO add your handling code here:
                 JFrame frame = new JFrame("Search Filter Example");
 
@@ -840,7 +896,7 @@ public class InputBuku extends javax.swing.JFrame {
                             JList<String> list = (JList<String>) e.getSource();
                             if (list.getSelectedValue() != null) {
                                 String selectedValue = list.getSelectedValue();
-                                jTextField1.setText(selectedValue);
+                                jTextFieldKategori.setText(selectedValue);
                             }
                         }
                     }
@@ -856,38 +912,8 @@ public class InputBuku extends javax.swing.JFrame {
                 frame.setVisible(true);
 
 
-            
-    }//GEN-LAST:event_jTextField1KeyTyped
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-        new InputBuku().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel5MouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
-        new InputSkripsi().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        // TODO add your handling code here:
-        new PeminjamanBuku().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        // TODO add your handling code here:
-        new LaporanDataBuku().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel7MouseClicked
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
-        new LaporanDataSkripsi().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+          
+    }//GEN-LAST:event_jTextFieldKategoriKeyTyped
 
     /**
      * @param args the command line arguments
@@ -956,6 +982,7 @@ public class InputBuku extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelISBN1;
+    private javax.swing.JLabel jLabelJKategori;
     private javax.swing.JLabel jLabelJudulBuku;
     private javax.swing.JLabel jLabelJumlahHalaman;
     private javax.swing.JLabel jLabelPenerbit;
@@ -966,10 +993,10 @@ public class InputBuku extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTableDataBuku;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldISBN;
     private javax.swing.JTextField jTextFieldJudulBuku;
     private javax.swing.JTextField jTextFieldJumlahHalaman;
+    private javax.swing.JTextField jTextFieldKategori;
     private javax.swing.JTextField jTextFieldPenerbit;
     private javax.swing.JTextField jTextFieldPengarang;
     private javax.swing.JTextField jTextFieldSearching;

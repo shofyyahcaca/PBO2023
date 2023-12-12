@@ -125,15 +125,12 @@ public class LaporanDataBuku extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButtonCetak = new javax.swing.JButton();
-        jButtonDelete = new javax.swing.JButton();
-        jLabelwelcomme = new javax.swing.JLabel();
-        bg = new javax.swing.JLabel();
-        jButtonSimpan = new javax.swing.JButton();
-        jButtonUpdate = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableDataBuku = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        jButtonCetak = new javax.swing.JButton();
+        jLabelwelcomme = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
         jComboBoxKategori = new javax.swing.JComboBox<>();
         jTextFieldSearching = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -154,6 +151,26 @@ public class LaporanDataBuku extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTableDataBuku.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ISBN", "Judul Buku", "Kategori", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman"
+            }
+        ));
+        jTableDataBuku.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableDataBukuMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTableDataBuku);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 660, 330));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("PEMINJAMAN");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,18 +189,7 @@ public class LaporanDataBuku extends javax.swing.JFrame {
                 jButtonCetakActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 240, 90, 30));
-
-        jButtonDelete.setBackground(new java.awt.Color(25, 133, 167));
-        jButtonDelete.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonDelete.setText("DELETE");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeleteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 240, 90, 30));
+        getContentPane().add(jButtonCetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 250, 90, 30));
 
         jLabelwelcomme.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelwelcomme.setForeground(new java.awt.Color(6, 128, 153));
@@ -193,49 +199,7 @@ public class LaporanDataBuku extends javax.swing.JFrame {
         bg.setIcon(new javax.swing.ImageIcon("C:\\Users\\SHOFYYAH\\Downloads\\1a.png")); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 60));
 
-        jButtonSimpan.setBackground(new java.awt.Color(25, 133, 167));
-        jButtonSimpan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonSimpan.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSimpan.setText("SIMPAN");
-        jButtonSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSimpanActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 240, 90, 30));
-
-        jButtonUpdate.setBackground(new java.awt.Color(25, 133, 167));
-        jButtonUpdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonUpdate.setText("UPDATE");
-        jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonUpdateActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 240, 90, 30));
-
-        jTableDataBuku.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Kategori", "ISBN", "Judul Buku", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman"
-            }
-        ));
-        jTableDataBuku.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableDataBukuMouseClicked(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTableDataBuku);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 720, 360));
-
-        jComboBoxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ISBN", "Judul Buku", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman", " " }));
+        jComboBoxKategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ISBN", "Judul Buku", "Kategori", "Penerbit", "Pengarang", "Tahun Terbit", "Jumlah Halaman", " " }));
         jComboBoxKategori.setBorder(null);
         jComboBoxKategori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -328,155 +292,7 @@ public class LaporanDataBuku extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
-        // TODO add your handling code here:
-//    String ISBN = jTextFieldISBN.getText().trim();
-//
-//    // awal persistence
-//        EntityManager entityManager = Persistence.createEntityManagerFactory("UASPU").createEntityManager();
-//        entityManager.getTransaction().begin();
-//        Buku b = entityManager.find(Buku.class, ISBN);
-//        entityManager.remove(b);
-//        entityManager.getTransaction().commit();
-//    
-//        try {
-//            
-//        JOptionPane.showMessageDialog(null, "Delete Berhasil", "Sukses", JOptionPane.INFORMATION_MESSAGE);
-//        
-//        } catch (Exception ex) {
-//
-//            JOptionPane.showMessageDialog(null, "Delete Gagal : " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-//        }
-//        
-//        jTextFieldISBN.setText("");
-//        jTextFieldJudulBuku.setText("");
-//        jTextFieldPenerbit.setText("");
-//        jTextFieldPengarang.setText("");
-//        jTextFieldTahunTerbit.setText("");
-//        jTextFieldJumlahHalaman.setText("");
-//        
-//        DefaultTableModel model = (DefaultTableModel) jTableDataBuku.getModel();
-//                model.setRowCount(0);
-//                tampil();
-    }//GEN-LAST:event_jButtonDeleteActionPerformed
-
     
-    private void jButtonSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSimpanActionPerformed
-        // TODO add your handling code here:
-//        String ISBN = jTextFieldISBN.getText().trim();
-//        String Judul_Buku = jTextFieldJudulBuku.getText();
-//        String Penerbit = jTextFieldPenerbit.getText();
-//        String Pengarang = jTextFieldPengarang.getText();
-//        String Tahun_Terbit = jTextFieldTahunTerbit.getText();
-//        String Jumlah_Halaman = jTextFieldJumlahHalaman.getText();
-//        
-//        // awal persistence
-//        try {
-//            
-//            EntityManager entityManager = Persistence.createEntityManagerFactory("UASPU").createEntityManager();
-//            entityManager.getTransaction().begin();
-//            Buku b = new Buku();
-//            b.setIsbn(ISBN);
-//            b.setJudulBuku(Judul_Buku);
-//            b.setPenerbit(Penerbit);
-//            b.setPengarang(Pengarang);
-//            b.setTahunTerbit(Tahun_Terbit);
-//            b.setJumlahHalaman(Jumlah_Halaman);
-//            entityManager.persist(b);
-//            entityManager.getTransaction().commit();
-//
-//            entityManager.persist(b);
-////            entityManager.getTransaction().commit();
-//
-//            JOptionPane.showMessageDialog(null, "Data berhasil disimpan.", "Sukses", JOptionPane.INFORMATION_MESSAGE);
-//        } catch (Exception ex) {
-//
-//            JOptionPane.showMessageDialog(null, "Gagal menyimpan data: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-//        }
-//        // akhir persistence
-//        jTextFieldISBN.setText("");
-//        jTextFieldJudulBuku.setText("");
-//        jTextFieldPenerbit.setText("");
-//        jTextFieldPengarang.setText("");
-//        jTextFieldTahunTerbit.setText("");
-//        jTextFieldJumlahHalaman.setText("");
-//        
-//        DefaultTableModel model = (DefaultTableModel) jTableDataBuku.getModel();
-//                model.setRowCount(0);
-//                tampil();
-//        
-    }//GEN-LAST:event_jButtonSimpanActionPerformed
-
-    private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
-        // TODO add your handling code here:
-////        String ISBN = jTextFieldISBN.getText().trim();
-////        String Judul_Buku = jTextFieldJudulBuku.getText();
-////        String Penerbit = jTextFieldPenerbit.getText();
-////        String Pengarang = jTextFieldPengarang.getText();
-////        String Tahun_Terbit = jTextFieldTahunTerbit.getText();
-////        String Jumlah_Halaman = jTextFieldJumlahHalaman.getText();
-////        // awal persistence
-////        try {
-////            
-////            EntityManager entityManager = Persistence.createEntityManagerFactory("UASPU").createEntityManager();
-////            entityManager.getTransaction().begin();
-////            Buku b = entityManager.find(Buku.class, ISBN);
-////            b.setIsbn(ISBN);
-////            b.setJudulBuku(Judul_Buku);
-////            b.setPenerbit(Penerbit);
-////            b.setPengarang(Pengarang);
-////            b.setTahunTerbit(Tahun_Terbit);
-////            b.setJumlahHalaman(Jumlah_Halaman);
-////            
-////            entityManager.persist(b);
-////            entityManager.getTransaction().commit();
-////            
-////            JOptionPane.showMessageDialog(null, "Update Berhasil", "Sukses", JOptionPane.INFORMATION_MESSAGE);
-////            
-////        } catch (Exception ex) {
-////
-////            JOptionPane.showMessageDialog(null, "Update Gagal : " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-////        }
-////        // akhir persistence
-////        jTextFieldISBN.setText("");
-////        jTextFieldJudulBuku.setText("");
-////        jTextFieldPenerbit.setText("");
-////        jTextFieldPengarang.setText("");
-////        jTextFieldTahunTerbit.setText("");
-////        jTextFieldJumlahHalaman.setText("");
-////        
-////        DefaultTableModel model = (DefaultTableModel) jTableDataBuku.getModel();
-////                model.setRowCount(0);
-////                tampil();
-////                
-    }//GEN-LAST:event_jButtonUpdateActionPerformed
-
-    private void jTableDataBukuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableDataBukuMouseClicked
-//        // TODO add your handling code here:
-//        int baris = jTableDataBuku.rowAtPoint(evt.getPoint());
-//
-//        String ISBN = jTableDataBuku.getValueAt(baris, 0).toString();
-//        jTextFieldISBN.setText(ISBN);
-//
-//        String JudulBuku = jTableDataBuku.getValueAt(baris, 1).toString();
-//        jTextFieldJudulBuku.setText(JudulBuku);
-//        
-//        String Penerbit = jTableDataBuku.getValueAt(baris, 2).toString();
-//        jTextFieldPenerbit.setText(Penerbit);
-//        
-//        String Pengarang = jTableDataBuku.getValueAt(baris, 3).toString();
-//        jTextFieldPengarang.setText(Pengarang);
-//
-//        String TahunTerbit = jTableDataBuku.getValueAt(baris, 4).toString();
-//        jTextFieldTahunTerbit.setText(TahunTerbit);
-//        
-//        String JumlahHalaman = jTableDataBuku.getValueAt(baris, 5).toString();
-//        jTextFieldJumlahHalaman.setText(JumlahHalaman);
-        
-//        new AddBuku().setVisible(true);
-//        this.dispose();
-    }//GEN-LAST:event_jTableDataBukuMouseClicked
-
     private void jComboBoxKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxKategoriActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxKategoriActionPerformed
@@ -775,6 +591,32 @@ public class LaporanDataBuku extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    private void jTableDataBukuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableDataBukuMouseClicked
+        // TODO add your handling code here:
+//        int baris = jTableDataBuku.rowAtPoint(evt.getPoint());
+//
+//        String ISBN = jTableDataBuku.getValueAt(baris, 0).toString();
+//        jTextFieldISBN.setText(ISBN);
+//
+//        String JudulBuku = jTableDataBuku.getValueAt(baris, 1).toString();
+//        jTextFieldJudulBuku.setText(JudulBuku);
+//
+//        String Penerbit = jTableDataBuku.getValueAt(baris, 2).toString();
+//        jTextFieldPenerbit.setText(Penerbit);
+//
+//        String Pengarang = jTableDataBuku.getValueAt(baris, 3).toString();
+//        jTextFieldPengarang.setText(Pengarang);
+//
+//        String TahunTerbit = jTableDataBuku.getValueAt(baris, 4).toString();
+//        jTextFieldTahunTerbit.setText(TahunTerbit);
+//
+//        String JumlahHalaman = jTableDataBuku.getValueAt(baris, 5).toString();
+//        jTextFieldJumlahHalaman.setText(JumlahHalaman);
+
+        //        new AddBuku().setVisible(true);
+        //        this.dispose();
+    }//GEN-LAST:event_jTableDataBukuMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -844,9 +686,6 @@ public class LaporanDataBuku extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bg;
     private javax.swing.JButton jButtonCetak;
-    private javax.swing.JButton jButtonDelete;
-    private javax.swing.JButton jButtonSimpan;
-    private javax.swing.JButton jButtonUpdate;
     private javax.swing.JComboBox<String> jComboBoxKategori;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
