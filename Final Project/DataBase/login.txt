@@ -1,0 +1,8 @@
+INSERT INTO public.login(
+	username, password)
+	VALUES 
+	('admin', '2023'),
+	('Petugas1', '0101'),
+	('Petugas2', '0202'),
+	('Petugas3', '0303')
+	;
