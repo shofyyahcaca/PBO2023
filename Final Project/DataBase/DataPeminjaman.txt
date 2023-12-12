@@ -1,0 +1,142 @@
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P1', 'Dewi Susanti', 'Sains dan Matematika', '010101', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P2', 'Rudi Cahyono', 'Teknologi', '010102', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P3', 'Sinta Wijaya', 'Teknologi', '010103', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P4', 'Budi Santoso', 'Seni', '010104', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P5', 'Lina Setiawan', 'Teknologi', '010105', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P6', 'Adi Prabowo', 'Sejarah dan Geografi', '010106', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P7', 'Fitriani Rahman', 'Sains dan Matematika', '010107', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P8', 'Agus Sutanto', 'Sejarah dan Geografi', '010108', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P9', 'Rina Wulandari', 'Bahasa', '010109', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P10', 'Bayu Prasetyo', 'Sains dan Matematika', '010110', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P11', 'Dubois', 'Sains dan Matematika', '010111', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P12', 'Lefevre', 'Teknologi', '010112', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P13', 'Mercier', 'Teknologi', '010113', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P14', 'Petit', 'Seni', '010114', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P15', 'Roussel', 'Teknologi', '010115', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P16', 'Blanc', 'Sejarah dan Geografi', '010116', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P17', 'Guerin', 'Sains dan Matematika', '010117', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P18', 'Legrand', 'Sejarah dan Geografi', '010118', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P19', 'Masson', 'Bahasa', '010119', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P20', 'Garnier', 'Sains dan Matematika', '010120', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P21', 'Berthier', 'Literartur dan Sastra', '010121', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P22', 'Dupont', 'Sosial', '010122', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P23', 'Mercier', 'Sosial', '010123', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P24', 'Martin', 'Seni', '010124', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P25', 'Girard', 'Teknologi', '010125', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P26', 'Laurent', 'Sejarah dan Geografi', '010126', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P27', 'Moreau', 'Literartur dan Sastra', '010127', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P28', 'Durand', 'Sejarah dan Geografi', '010128', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P29', 'Simon', 'Literartur dan Sastra', '010129', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P30', 'Roux', 'Bahasa', '010130', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P31', 'Martinez', 'Literartur dan Sastra', '010131', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P32', 'Garcia', 'Sosial', '010132', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P33', 'Lopez', 'Sosial', '010133', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P34', 'Rodriguez', 'Seni', '010134', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P35', 'Fernandez', 'Teknologi', '010135', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P36', 'Sanchez', 'Sejarah dan Geografi', '010136', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P37', 'Gomez', 'Literartur dan Sastra', '010137', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P38', 'Perez', 'Sejarah dan Geografi', '010138', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P39', 'Martin', 'Literartur dan Sastra', '010139', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P40', 'Jimenez', 'Bahasa', '010140', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P41', 'Dubois', 'Literartur dan Sastra', '010141', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P42', 'Lambert', 'Sosial', '010142', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P43', 'François', 'Sosial', '010143', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P44', 'Martens', 'Seni', '010144', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P45', 'Leclercq', 'Teknologi', '010145', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P46', 'Leroux', 'Sejarah dan Geografi', '010146', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P47', 'Simon', 'Literartur dan Sastra', '010147', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P48', 'Dumont', 'Sejarah dan Geografi', '010148', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P49', 'Lemaire', 'Literartur dan Sastra', '010149', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P50', 'Jacob', 'Bahasa', '010150', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P51', 'Sato', 'Literartur dan Sastra', '010151', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P52', 'Suzuki', 'Umum', '010152', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P53', 'Takahashi', 'Umum', '010153', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P54', 'Tanaka', 'Seni', '010154', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P55', 'Watanabe', 'Teknologi', '010155', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P56', 'Ito', 'Teknologi', '010156', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P57', 'Yamamoto', 'Agama', '010157', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P58', 'Nakamura', 'Sejarah dan Geografi', '010158', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P59', 'Kobayashi', 'Agama', '010159', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P60', 'Kato', 'Seni', '010160', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P61', 'Somchai', 'Literartur dan Sastra', '010161', '3', 'Sistem Informasi', 'Dipinjam', '2021/05/20', '2021/05/22'),
+    ('P62', 'Napat', 'Umum', '010162', '7', 'Sistem Informasi', 'Dipinjam', '2020/11/15', '2020/11/17'),
+    ('P63', 'Achara', 'Umum', '010163', '5', 'Sistem Informasi', 'Dipinjam', '2022/07/10', '2022/07/12'),
+    ('P64', 'Kritsana', 'Seni', '010164', '3', 'Sistem Informasi', 'Dipinjam', '2019/09/28', '2019/09/30'),
+    ('P65', 'Chatchai', 'Teknologi', '010165', '5', 'Sistem Informasi', 'Dipinjam', '2023/12/05', '2023/12/07'),
+    ('P66', 'Wirat', 'Teknologi', '010166', '7', 'Sistem Informasi', 'Dipinjam', '2018/08/22', '2018/08/24'),
+    ('P67', 'Sommai', 'Agama', '010167', '7', 'Sistem Informasi', 'Dipinjam', '2024/04/18', '2024/04/20'),
+    ('P68', 'Siri', 'Sejarah dan Geografi', '010168', '3', 'Sistem Informasi', 'Dipinjam', '2017/10/30', '2017/11/01'),
+    ('P69', 'Takahashi', 'Agama', '010169', '1', 'Sistem Informasi', 'Dipinjam', '2025/09/12', '2025/09/14'),
+    ('P70', 'Sato', 'Seni', '010170', '3', 'Sistem Informasi', 'Dipinjam', '2016/12/04', '2016/12/06');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P71', 'Prakanong', 'Literartur dan Sastra', '010171', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P72', 'Phimak', 'Umum', '010172', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P73', 'Lala', 'Umum', '010173', '5', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P74', 'Lili', 'Seni', '010174', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P75', 'Lulu', 'Teknologi', '010175', '5', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P76', 'Nana', 'Teknologi', '010176', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/05', '2023/01/03'),
+    ('P77', 'jayan', 'Agama', '010177', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/15', '2023/01/03'),
+    ('P78', 'Marina', 'Sejarah dan Geografi', '010178', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/17', '2023/01/03'),
+    ('P79', 'Man', 'Agama', '010179', '1', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P80', 'Ram', 'Seni', '010180', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/21', '2023/01/03');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P81', 'Jimmy', 'Sains dan Matematika', '010181', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P82', 'Jayen', 'Sains dan Matematika', '010182', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P83', 'Jay', 'Sains dan Matematika', '010183', '5', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P84', 'Jypi', 'Sosial', '010184', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P85', 'Fan', 'Sosial', '010185', '5', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P86', 'Raen', 'Sejarah dan Geografi', '010186', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/05', '2023/01/03'),
+    ('P87', 'Roy', 'Bahasa', '010187', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/15', '2023/01/03'),
+    ('P88', 'Betrice', 'Sejarah dan Geografi', '010188', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/17', '2023/01/03'),
+    ('P89', 'Rain', 'Teknologi', '010189', '1', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P90', 'George', 'Seni', '010190', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/21', '2023/01/03');
+
+INSERT INTO public.peminjaman(
+	id_peminjaman, nama_peminjam, kategori, nim, semester, prodi, status, tanggal_peminjaman, tanggal_pengembalian)
+	VALUES 
+	('P91', 'Felix', 'Sains dan Matematika', '010191', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P92', 'Bara', 'Sains dan Matematika', '010192', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P93', 'Helen', 'Sains dan Matematika', '010193', '5', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P94', 'Nunu', 'Sosial', '010194', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P95', 'Steve', 'Sosial', '010195', '5', 'Sistem Informasi', 'Sudah Kembali', '2023/01/01', '2023/01/03'),
+    ('P96', 'Peter', 'Sejarah dan Geografi', '010196', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/05', '2023/01/03'),
+    ('P97', 'Robinson', 'Bahasa', '010197', '7', 'Sistem Informasi', 'Sudah Kembali', '2023/01/15', '2023/01/03'),
+    ('P98', 'Belle', 'Sejarah dan Geografi', '010198', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/17', '2023/01/03'),
+    ('P99', 'Hazel', 'Teknologi', '010199', '1', 'Sistem Informasi', 'Sudah Kembali', '2023/01/11', '2023/01/03'),
+    ('P100', 'Raden', 'Seni', '010200', '3', 'Sistem Informasi', 'Sudah Kembali', '2023/01/21', '2023/01/03');
+
+
+
