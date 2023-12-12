@@ -1,0 +1,13 @@
+INSERT INTO public.kategori_peminjaman(
+	id_kategori, nama_kategori)
+	VALUES 
+	('000-090', 'Umum'),
+	('100-190', 'Filsafat dan Psikologi'),
+	('200-290', 'Agama'),
+	('300-390', 'Sosial'),
+	('400-490', 'Bahasa'),
+	('500-590', 'Sains dan Matematika'),
+	('600-690', 'Teknologi'),
+	('700-790', 'Seni'),
+	('800-890', 'Literatur dan Sastra'),
+	('900-990', 'Sejarah dan Geografi');

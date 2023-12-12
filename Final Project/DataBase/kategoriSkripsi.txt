@@ -1,0 +1,6 @@
+INSERT INTO public.kategori_skripsi(
+	id_kategori, nama_kategori)
+	VALUES 
+	('0000-9999', 'Manajemen'),
+	('10000-19999', 'Sistem Cerdas'),
+	('20000-29999', 'Teknologi Aplikasi');
