@@ -2,13 +2,12 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="UASPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>perpustakaan.Buku</class>
     <class>perpustakaan.Kategori</class>
-    <class>perpustakaan.KategoriSkripsi</class>
-    <class>perpustakaan.KategoriBuku</class>
     <class>perpustakaan.Login_1</class>
-    <class>perpustakaan.Skripsi</class>
     <class>perpustakaan.Peminjaman</class>
+    <class>perpustakaan.KategoriSkripsi</class>
+    <class>perpustakaan.Skripsi</class>
+    <class>perpustakaan.Buku</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/ProjectUAS"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
