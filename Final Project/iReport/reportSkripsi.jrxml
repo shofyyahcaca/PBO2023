@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c41fe91f-4ae5-4ae2-a1ad-32f4fdbad73b">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="querySearch" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="searchBy" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM skripsi]]>
+	</queryString>
+	<field name="id_skripsi" class="java.lang.String"/>
+	<field name="judul_skripsi" class="java.lang.String"/>
+	<field name="kategori" class="java.lang.String"/>
+	<field name="penulis" class="java.lang.String"/>
+	<field name="prodi" class="java.lang.String"/>
+	<field name="tahun" class="java.lang.String"/>
+	<field name="pembimbing" class="java.lang.String"/>
+	<field name="jumlah_halaman" class="java.lang.String"/>
+	<group name="id_skripsi">
+		<groupExpression><![CDATA[$F{id_skripsi}]]></groupExpression>
+	</group>
+	<group name="judul_skripsi">
+		<groupExpression><![CDATA[$F{judul_skripsi}]]></groupExpression>
+	</group>
+	<group name="kategori">
+		<groupExpression><![CDATA[$F{kategori}]]></groupExpression>
+	</group>
+	<group name="penulis">
+		<groupExpression><![CDATA[$F{penulis}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="12" width="555" height="67" forecolor="#177C95" backcolor="#177C95" uuid="d6ea6403-498d-41f6-9f9c-8226ba02f013"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="81" y="42" width="407" height="37" forecolor="#FFFFCC" uuid="41bbee12-f8a0-4daa-ae10-4e0923a66eb6"/>
+				<box>
+					<pen lineColor="#FFFFCC"/>
+					<topPen lineColor="#FFFFCC"/>
+					<leftPen lineColor="#FFFFCC"/>
+					<bottomPen lineColor="#FFFFCC"/>
+					<rightPen lineColor="#FFFFCC"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="22"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN BISA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" forecolor="#177C95" backcolor="#177C95" uuid="5685a7bd-a02e-400a-bba0-1623b3d7b3eb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="198" y="0" width="167" height="20" forecolor="#FFFFCC" uuid="2f1d515d-56e2-496c-84cd-2513a4e59faf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUKU & SKRIPSI UINSA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="20" width="483" height="20" uuid="8a4fc0ec-96f6-411e-9ef9-50079169e649"/>
+				<textFieldExpression><![CDATA["hasil pencarian dari " + $P{querySearch} +" berdasarkan pada kolom " + $P{searchBy} +" hasilnya adalah:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="382" y="55" width="46" height="20" uuid="90b9e865-2aeb-485c-8841-dfcb32e4fe87"/>
+				<text><![CDATA[Surabaya,]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="430" y="55" width="100" height="20" uuid="508d32b4-54b7-4367-959a-da8283d88f91"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" forecolor="#CCCCCC" backcolor="#FFFFCC" uuid="0eb963fd-649d-4ac4-89a7-b09b969efa8b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="214" y="0" width="45" height="20" uuid="8eeb1e52-0958-4266-9ace-87548c67250d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Penulis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="50" height="20" uuid="f84a45fa-0938-4ed2-9fc7-3e98ca318113"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="55" height="20" uuid="7ec0cf15-358c-49ed-9c8d-002b27ae843f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Skripsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="0" width="99" height="20" uuid="d7debc89-1864-497d-ba8d-4612ec08bf0a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Halaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="38" height="20" uuid="e0344a82-f30e-45f2-9cb4-877140a1a1ee"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prodi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="0" width="76" height="20" uuid="8b198384-6e02-48c0-9909-009dc99354c2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Judul Skripsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="38" height="20" uuid="7f25bd90-46fa-4ba1-a6bc-aab2c18d1f86"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tahun]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="0" width="75" height="20" uuid="ecc1bca7-ee74-4304-8595-56621ff35e9f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pembimbing]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="25" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="138526ec-a097-4253-8710-09cc3b248c26"/>
+			</rectangle>
+			<textField>
+				<reportElement x="63" y="0" width="76" height="20" uuid="26672bac-1a9c-4b89-9e9a-db8c2373a802"/>
+				<textFieldExpression><![CDATA[$F{judul_skripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="63" height="20" uuid="21e1424f-b0b3-4848-a2b2-ef025f2b7aa0"/>
+				<textFieldExpression><![CDATA[$F{id_skripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="54" height="20" uuid="d457db6f-edec-41b1-9341-6b6349ca39c1"/>
+				<textFieldExpression><![CDATA[$F{kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="0" width="51" height="20" uuid="e107ad50-7251-4d01-b52c-767ee4f33dd2"/>
+				<textFieldExpression><![CDATA[$F{penulis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="45" height="20" uuid="6639b584-4348-4adb-95d3-bdd56794de87"/>
+				<textFieldExpression><![CDATA[$F{prodi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="47" height="20" uuid="5ad0cfd1-d6e5-4f90-aa89-ec59bfea89e5"/>
+				<textFieldExpression><![CDATA[$F{tahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="0" width="75" height="20" uuid="9d425c02-f28c-4b3f-8aca-fc13a7c03f70"/>
+				<textFieldExpression><![CDATA[$F{pembimbing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="0" width="98" height="20" uuid="dcda410d-2749-4714-9ef9-43050688c90d"/>
+				<textFieldExpression><![CDATA[$F{jumlah_halaman}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
